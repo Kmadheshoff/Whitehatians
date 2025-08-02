@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhiteHatians</title>
+    <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Fixed Vanta Background -->
+  <div id="vanta-globe" class="fixed top-0 left-0 w-full h-screen -z-10"></div>
+
+  <!-- Navbar -->
+  <nav class="bg-transparent shadow-lg fixed w-full z-50 top-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <img src="logo.png" alt="Logo" class="h-10 w-auto" />
+          <div class="text-white text-lg font-semibold hidden md:block">Whitehatians</div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex space-x-8 items-center text-white">
+          <a href="#home" class="nav-link" onclick="showSection('home')">Home</a>
+          <a href="#about" class="nav-link"  onclick="showSection('about')">About</a>
+          <a href="#events" class="nav-link" onclick="showSection('events')">Events</a>
+          <a href="#office-bearers" class="nav-link" onclick="showSection('office-bearers')">Office Bearers</a>
+          <a href="#get-started" class="cta-button" onclick="showSection('get-started')">Contact Us</a>
+        </div>
+
+        <!-- Mobile Button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+<div id="mobile-menu" class="md:hidden hidden bg-transparent border-b border-white text-white rounded-b-xl px-4 pb-4 shadow-lg animate-fade-in-down">
+  <a href="#home" onclick="showSection('home')" class="mobile-link block py-2 text-white">Home</a>
+  <a href="#about" onclick="showSection('about')" class="mobile-link block py-2 text-white">About</a>
+  <a href="#events" onclick="showSection('events')" class="mobile-link block py-2 text-white">Events</a>
+  <a href="#office-bearers" onclick="showSection('office-bearers')" class="mobile-link block py-2 text-white">Office Bearers</a>
+  <a href="#get-started" onclick="showSection('get-started')" class="mobile-cta block py-2 font-bold text-white">Contact Us</a>
+</div>
+
+  </nav>
+
+  <!-- Header Section -->
+
+
+<section id="home" class="section-content hidden pt-10 px-4 sm:px-8 lg:px-16 text-white min-h-screen">
+  <div class="h-screen flex items-center justify-center text-white text-center relative z-10 px-4">
+  <div class="container max-w-4xl mx-auto">
+     <div class="header-bar flex justify-between items-center mb-4">
+  <img src="SRM.png" alt="SRMVEC" class="header-logo h-16 md:h-20" />
+  
+  <div class="header-text text-sm md:text-3xl font-bold mb-4 text-center">
+    SRM VALLIAMMAI ENGINEERING COLLEGE
+    <p class="text-[15px] md:text-sm font-normal normal-case">(An Autonomous Institution)</p>
+  </div>
+
+  <img src="vec.png" alt="SRMVEC" class="header-logo h-16 md:h-20" />
+</div>
+
+<h3 class="dept-heading text-sm md:text-3xl font-bold mb-4 text-center">
+  DEPARTMENT OF CYBER SECURITY
+</h3>
+
+      <div class="title-image-container mb-4">
+        <img src="logo.png" class="title-image mx-auto h-32" alt="Capture the Flag Title" />
+      </div>
+
+      <div class="curved-text text-white font-medium mb-8">
+        <span style="font-size: 12px;">S</span>
+        <span style="font-size: 13px;">i</span>
+        <span style="font-size: 14px;">n</span>
+        <span style="font-size: 15px;">c</span>
+        <span style="font-size: 16px;">e</span>&nbsp;
+        <span style="font-size: 16px;">2</span>
+        <span style="font-size: 15px;">0</span>
+        <span style="font-size: 14px;">2</span>
+        <span style="font-size: 13px;">2</span>
+      </div>
+
+      <!-- Explore More Button -->
+      <div class="flex justify-center">
+        <a href="#more-section" class="group flex items-center gap-2 px-6 py-2 border border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-300">
+          Explore More
+          <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+<!-- More Section -->
+<div id="more-section" class="relative z-10 pt-24 px-4 sm:px-8 lg:px-16 text-white">
+  <div class="space-y-24 max-w-5xl mx-auto">
+    <!--upcoming-events-->
+<section class="pt-20">
+  <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center text-white tracking-wide">
+    🚀 Upcoming Events
+  </h2>
+
+  <div id="upcoming-events-home" class="flex flex-wrap justify-center gap-12 fade-in">
+    <!-- Cards injected by JS -->
+  </div>
+</section>
+
+
+
+    <!-- Highlights -->
+    <section class="animate-fade-in">
+  <div class="bg-transparent p-8 rounded-3xl shadow-2xl max-w-6xl ">
+    <h2 class="text-3xl font-bold mb-6 text-white text-center">Highlights</h2>
+    <p class="text-lg text-gray-300 text-center mb-10">Explore our past achievements and major milestones.</p>
+
+    <!-- Photo Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+  <img src="g1.jpg" class="highlight-thumb" onclick="openFullscreen(this.src)">
+  <img src="g2.jpg" class="highlight-thumb" onclick="openFullscreen(this.src)">
+  <img src="g3.jpg" class="highlight-thumb" onclick="openFullscreen(this.src)">
+  <img src="g4.jpg" class="highlight-thumb" onclick="openFullscreen(this.src)">
+  <img src="g5.jpg" class="highlight-thumb" onclick="openFullscreen(this.src)">
+  <img src="g6.jpg" class="highlight-thumb" onclick="openFullscreen(this.src)">
+  <img src="g7.jpg" class="highlight-thumb" onclick="openFullscreen(this.src)">
+  <img src="g8.jpg" class="highlight-thumb" onclick="openFullscreen(this.src)">
+  <!-- Add more as needed --></div>
+
+<!-- Fullscreen Modal -->
+<div id="fullscreenViewer" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
+  <div class="relative w-[90%] max-w-[800px] h-[500px] flex items-center justify-center bg-transparent">
+    <img id="fullscreenImg" class="max-h-full max-w-full object-contain rounded-xl shadow-xl border-2 border-white" />
+    <button onclick="closeFullscreen()" class="absolute top-2 right-3 text-white text-3xl font-bold hover:text-red-500 transition">×</button>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<section class="bg-transparent py-14 px-6 rounded-3xl shadow-2xl max-w-6xl ">
+  <div class="text-center mb-10">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Featured Spotlight</h2>
+    <p class="text-lg text-gray-400">Catch the moments that made us proud — from innovations to celebrations.</p>
+  </div>
+
+  <!-- YouTube Video -->
+  <div class="group relative overflow-hidden rounded-2xl border-2 border-blue-500/30 hover:border-blue-400 transition-all duration-300 shadow-xl mb-10">
+    <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-transparent rounded-2xl group-hover:opacity-30 transition-all duration-500 z-10"></div>
+    <iframe
+      class="relative z-20 w-full h-[300px] sm:h-[400px] rounded-2xl"
+      src="https://www.youtube.com/embed/1JLr6B4VCgI?si=EYyreLK310um8zp"
+      title="Featured YouTube video"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <!-- Social Actions -->
+  <div class="flex flex-wrap justify-center gap-6 text-white">
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@whitehatians" target="_blank" class="flex items-center gap-2 px-5 py-2 rounded-full bg-red-600/80 hover:bg-red-700 shadow-lg transition">
+      <i class="fab fa-youtube text-xl"></i>
+      <span class="font-medium">YouTube</span>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/whitehatians" target="_blank" class="flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 hover:from-pink-600 hover:to-yellow-600 shadow-lg transition">
+      <i class="fab fa-instagram text-xl"></i>
+      <span class="font-medium">Instagram</span>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/company/whitehatians" target="_blank" class="flex items-center gap-2 px-5 py-2 rounded-full bg-blue-700 hover:bg-blue-800 shadow-lg transition">
+      <i class="fab fa-linkedin text-xl"></i>
+      <span class="font-medium">LinkedIn</span>
+    </a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/whitehatians" target="_blank" class="flex items-center gap-2 px-5 py-2 rounded-full bg-blue-600 hover:bg-blue-700 shadow-lg transition">
+      <i class="fab fa-facebook text-xl"></i>
+      <span class="font-medium">Facebook</span>
+    </a>
+  </div>
+</section>
+
+    
+  </div>
+</div>
+</section>
+
+    <!-- About Section -->
+<section id="about" class="section-content hidden pt-24 px-4 sm:px-8 lg:px-16 text-white min-h-screen">
+
+
+ <!-- Small 16:9 Image Slider -->
+<div class="relative w-full max-w-xl mx-auto overflow-hidden rounded-xl aspect-video">
+  <div class="swiper w-full h-full">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="img1.jpg" class="w-full h-full object-cover" alt="Slide 1" />
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="img2.jpg" class="w-full h-full object-cover" alt="Slide 2" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="img3.jpg" class="w-full h-full object-cover" alt="Slide 3" />
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+
+
+  <section class="px-4 py-12 max-w-7xl mx-auto space-y-16">
+<!-- 1st Block -->
+<div class="flex flex-col md:flex-row items-center gap-8 mb-12">
+  <div class="md:w-1/2 flex justify-center">
+    <img src="SRM.png" alt="SRM img"
+         class="rounded-xl shadow-md w-[200px] h-[200px] object-contain  p-2" />
+  </div>
+  <div class="md:w-1/2 text-white">
+    <h2 class="text-2xl font-bold mb-4">
+      About the Department of <br>
+      <strong class="text-indigo-400">Cyber Security & WhiteHatians Club</strong>
+    </h2>
+    <p>
+      The Department of Cyber Security at <b>SRM Valliammai Engineering College</b> was established to meet the rapidly growing global demand for cybersecurity professionals. With a well-structured curriculum tailored to current industry needs, the department equips students with the essential knowledge and skills to thrive in the dynamic field of cyber security.
+    </p>
+  </div>
+</div>
+
+<!-- 2nd Block -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-8 mb-12">
+  <div class="md:w-1/2 flex justify-center">
+    <img src="logo.png" alt="Whitehatians Club"
+         class="rounded-xl shadow-md w-[200px] h-[200px] object-contain  p-2" />
+  </div>
+  <div class="md:w-1/2 text-white">
+    <h2 class="text-2xl font-bold mb-4">
+      About <strong class="text-indigo-400">Whitehatians Club</strong>
+    </h2>
+    <p>
+The Whitehatians Club, the official technical club under the department, aims to create a platform for students to explore and expand their expertise in cyber security. It encourages collaboration among like-minded peers and provides opportunities for hands-on learning, interaction with industry experts, and preparation for real-world challenges.    </p>
+  </div>
+</div>
+
+<!-- 3rd Block -->
+<div class="flex flex-col md:flex-row items-center gap-8">
+  <div class="md:w-1/2 flex justify-center">
+    <img src="vec.png" alt="vec img"
+         class="rounded-xl shadow-md w-[200px] h-[200px] object-contain p-2" />
+  </div>
+  <div class="md:w-1/2 text-white">
+    <h2 class="text-2xl font-bold mb-4">
+      Our <strong class="text-indigo-400">Activities</strong>
+    </h2>
+    <p>
+The club has successfully organized major technical events, including 24-hour hackathons, state-level Capture the Flag (CTF) and Workshops competitions. With a commitment to continuous learning and innovation, the club is set to conduct even more impactful events in the future, fostering a strong cybersecurity culture among students.
+    </p>
+  </div>
+</div>
+</section>
+
+</section>
+
+<!-- Events Section -->
+<section id="events" class="section-content hidden pt-24 px-4 sm:px-8 lg:px-16 text-white min-h-screen">
+
+    <section class="px-4 py-16 max-w-7xl mx-auto">
+  <h2 class="text-4xl md:text-5xl font-extrabold mb-14 text-center text-white tracking-wider">
+    🚀 Upcoming Events
+  </h2>
+  
+  <div id="upcoming-events" class="flex flex-wrap justify-center gap-10 fade-in">
+    <!-- Cards will be injected here -->
+  </div>
+</section>
+
+    <h2 class="text-4xl md:text-5xl font-extrabold mt-24 mb-10 text-center text-white tracking-wider">🎯 Completed Events</h2>
+    <div id="completed-events" class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 fade-in flex flex-wrap justify-center"></div>
+  </section>
+
+
+</section>
+
+<!-- Office Bearers Section -->
+<section id="office-bearers" class="section-content hidden pt-24 px-4 sm:px-6 lg:px-16 text-white min-h-screen">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-center text-indigo-400 mb-12 tracking-wider">Office Bearers</h1>
+
+    <!-- Section Template -->
+    <section class="space-y-16">
+
+      <!-- Convenor -->
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-center mb-8">Convenor</h2>
+        <div class="flex justify-center">
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <!-- Front -->
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="hod.png" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Dr. M. Senthil Kumar</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Head of Department</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Back -->
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="hod.png" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Dr. M. Senthil Kumar</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Head of Department</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/senthil-kumar-murugesan-953376a2/" class="fab fa-linkedin hover:text-indigo-300"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Club Coordinators -->
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-center mb-8">Club Coordinators</h2>
+        <div class="flex flex-wrap justify-center gap-6 sm:gap-8">
+          <!-- Coordinator Card -->
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <!-- Front -->
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="rajubai.JPG" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Mr. E. Raj Kumar</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Ass. Professor</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Back -->
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="rajubai.JPG" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Mr. E. Raj Kumar</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Ass. Professor</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="#"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OBS -->
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-center mb-8">OBS (Office Bearer Students)</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 justify-items-center px-2 sm:px-4 py-8">
+          
+          <!-- Surya -->
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="surya.jpeg" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Surya K</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">President</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="surya.jpeg" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Surya K</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">President</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/surya-k-2b654a258/"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                    <a href="mailto:soharsurya@gmail.com"><i class="fas fa-envelope hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Naveen -->
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="naveen.jpeg" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Naveen N</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Vice President</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="naveen.jpeg" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Naveen N</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Vice President</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/naveen-n-92133a2a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abirami -->
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="abirami.jpeg" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Abirami</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Secretary</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="abirami.jpeg" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Abirami</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Secretary</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/abirami-ravi-366b20278"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sai Mohana Ram -->
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="sai.jpg" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Sai Mohana Ram D</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Joint Secretary</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="sai.jpg" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Sai Mohana Ram D</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Joint Secretary</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/sai-mohana-ram-d-610a53267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- More OBS Cards -->
+           <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="logo.png" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Harish K</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Treasurer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="logo.png" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Harish K</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Treasurer</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/surya-k-2b654a258/"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                    <a href="mailto:soharsurya@gmail.com"><i class="fas fa-envelope hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="logo.png" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Monoj Kumar P</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Joint Treasurer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="logo.png" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Monoj Kumar P</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Joint Treasurer</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/surya-k-2b654a258/"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                    <a href="mailto:soharsurya@gmail.com"><i class="fas fa-envelope hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="madhesh.jpeg" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Madhesh K</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Administrative Head</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="madhesh.jpeg" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Madhesh K</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Administrative Head</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/surya-k-2b654a258/"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                    <a href="mailto:soharsurya@gmail.com"><i class="fas fa-envelope hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="logo.png" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Mohamed Saajith</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Administrative Manager</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="logo.png" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Mohamed Saajith</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Administrative Manager</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/surya-k-2b654a258/"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                    <a href="mailto:soharsurya@gmail.com"><i class="fas fa-envelope hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="logo.png" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Lokesh S</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Functional Head</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="logo.png" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Lokesh S</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Functional Head</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/surya-k-2b654a258/"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                    <a href="mailto:soharsurya@gmail.com"><i class="fas fa-envelope hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="logo.png" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Kirtana v.S</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Functional Manager</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="logo.png" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Kirtana v.S</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Functional Manager</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/surya-k-2b654a258/"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                    <a href="mailto:soharsurya@gmail.com"><i class="fas fa-envelope hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="logo.png" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Navin Neta C.S.S</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Visual Head</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="logo.png" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Navin Neta C.S.S</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Visual Head</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/surya-k-2b654a258/"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                    <a href="mailto:soharsurya@gmail.com"><i class="fas fa-envelope hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="logo.png" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Sreelaya V</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Visua Manager</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="logo.png" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Sreelaya V</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Visual Manager</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/surya-k-2b654a258/"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                    <a href="mailto:soharsurya@gmail.com"><i class="fas fa-envelope hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="logo.png" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Lekha Shree </h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Promotional Head</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="logo.png" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Lekha Shree</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Promotional Head</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/surya-k-2b654a258/"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                    <a href="mailto:soharsurya@gmail.com"><i class="fas fa-envelope hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="logo.png" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Subramani G</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Promotional Manager</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="logo.png" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Subramani GK</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Promotional Manager</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/surya-k-2b654a258/"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                    <a href="mailto:soharsurya@gmail.com"><i class="fas fa-envelope hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="logo.png" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Karthikeyan S.R</h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Promotional Ass.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="logo.png" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Karthikeyan S.R</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Promotional Ass.</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/surya-k-2b654a258/"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                    <a href="mailto:soharsurya@gmail.com"><i class="fas fa-envelope hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card w-56 sm:w-60 h-80 rounded-xl overflow-hidden shadow-2xl">
+            <div class="flip-inner relative w-full h-full rounded-xl">
+              <div class="flip-front absolute w-full h-full">
+                <div class="relative w-full h-full">
+                  <img src="logo.png" class="object-cover w-full h-full" />
+                  <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-center">
+                    <h3 class="text-base sm:text-lg font-semibold">Durai R </h3>
+                    <p class="text-indigo-400 text-xs sm:text-sm">Promotional Ass.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back absolute w-full h-full rounded-xl overflow-hidden">
+                <div class="absolute inset-0">
+                  <img src="logo.png" class="w-full h-full object-cover filter blur-sm scale-105" />
+                  <div class="absolute inset-0 bg-black/70"></div>
+                </div>
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-white p-4">
+                  <h3 class="text-lg sm:text-xl font-bold mb-1">Durai R</h3>
+                  <p class="text-indigo-400 text-sm sm:mb-4 mb-2">Promotional Ass.</p>
+                  <div class="flex gap-6 text-xl sm:text-2xl">
+                    <a href="https://www.linkedin.com/in/surya-k-2b654a258/"><i class="fab fa-linkedin hover:text-indigo-300"></i></a>
+                    <a href="mailto:soharsurya@gmail.com"><i class="fas fa-envelope hover:text-indigo-300"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+
+    </section>
+  </div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="get-started" class="section-content hidden pt-24 px-4 sm:px-8 lg:px-16 text-white min-h-screen">
+  <!-- Transparent Glass Contact Form -->
+<section class="min-h-screen flex items-center justify-center bg-transparent" id="contact">
+  <div class="bg-gradient-to-br from-black via-gray-900 to-black border-white/20 rounded-2xl shadow-xl p-8 w-full max-w-xl">
+    <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-6">📩 Contact the <span class="text-indigo-400">President</span></h2>
+
+    <form action="https://script.google.com/macros/s/AKfycbxF1dGBhOwwZS0yIh7DMr_wRk1wsn_5aIBsvfVrEACFqNvBQkk9umpkTSfbjAf8w8AJ/exec" method="POST" class="space-y-6">
+      
+      <input type="hidden" name="_subject" value="New Contact Message for President" />
+
+      <!-- Name -->
+      <div>
+        <label class="text-white text-sm mb-1 block" for="name">Your Name</label>
+        <input type="text" name="name" id="name" required
+          class="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-indigo-500" 
+          placeholder="Enter your name" />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="text-white text-sm mb-1 block" for="email">Your Email</label>
+        <input type="email" name="email" id="email" required
+          class="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="Enter your email" />
+      </div>
+
+      <!-- Subject -->
+      <div>
+        <label class="text-white text-sm mb-1 block" for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" required
+          class="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="Subject" />
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label class="text-white text-sm mb-1 block" for="message">Message</label>
+        <textarea name="message" id="message" rows="5" required
+          class="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="Write your message..."></textarea>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center">
+        <button type="submit"
+          class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition-all duration-300">
+          🚀 Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+</section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-gradient-to-br from-black via-gray-900 to-black text-white px-4 sm:px-6 py-10 sm:py-12 mt-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 text-left">
+
+    <!-- College Address -->
+    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-white/10 shadow-lg transition-all hover:scale-105 duration-300">
+      <h4 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 flex items-center gap-2 text-indigo-400">
+        <i class="fas fa-location-dot animate-pulse"></i> College Address
+      </h4>
+      <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+        SRM Valliammai Engineering College,<br>
+        SRM Nagar, Kattankulathur,<br>
+        Chengalpattu, Tamil Nadu 603203, India
+      </p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-white/10 shadow-lg transition-all hover:scale-105 duration-300">
+      <h4 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 flex items-center gap-2 text-indigo-400">
+        <i class="fas fa-phone animate-pulse"></i> Contact Details
+      </h4>
+      <p class="text-gray-300 text-sm sm:text-base mb-2">
+        <strong class="text-white">Phone:</strong>
+        <a href="tel:+918778625617" class="text-blue-400 hover:underline ml-1">+91 87786 25617</a>,
+        <a href="tel:+919489009834" class="text-blue-400 hover:underline ml-1">+91 94890 09834</a>
+
+      </p>
+      <p class="text-gray-300 text-sm sm:text-base">
+        <strong class="text-white">Email:</strong>
+        <a href="mailto:srmveccyswhitehatians@gmail.com" class="text-blue-400 hover:underline ml-1">srmveccyswhitehatians@gmail.com</a>
+      </p>
+    </div>
+
+    <!-- Google Map -->
+    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-white/10 shadow-lg transition-all hover:scale-105 duration-300">
+      <h4 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 flex items-center gap-2 text-indigo-400">
+        <i class="fas fa-map-location animate-pulse"></i> Find Us on Map
+      </h4>
+      <div class="rounded-lg overflow-hidden shadow-md">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.046991279283!2d80.04233861482346!3d12.83773332150426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f73f77b6c9ff%3A0x82f8160f35b0fc52!2sSRM%20Valliammai%20Engineering%20College!5e0!3m2!1sen!2sin!4v1654701605800!5m2!1sen!2sin"
+          width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="mt-10 border-t border-white/10 pt-6 text-center">
+    <p class="text-xs sm:text-sm text-gray-400 tracking-wide">© <span id="year"></span> <strong>Whitehatians</strong>. All rights reserved.</p>
+  </div>
+</footer>
+
+  </div>
+</div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
